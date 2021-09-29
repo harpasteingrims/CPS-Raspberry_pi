@@ -1,4 +1,5 @@
- import explorerhat, time
+ import explorerhat
+ import time
 
  sleep_time = 0.1
  min_sleep = 0.001
