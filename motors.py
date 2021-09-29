@@ -13,10 +13,10 @@ motor2.backward(0.5)
 
 # motor1.forward()
 # motor2.backward()
-while True:
+# while True:
     # sleep(5)
-    motor1.reverse()
-    motor2.reverse()
+ #   motor1.reverse()
+ #   motor2.reverse()
     
-motor1.stop()
-motor2.stop()
+#motor1.stop()
+#motor2.stop()
