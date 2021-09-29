@@ -16,6 +16,7 @@ step_sequence = [
 ]
 
 explorerhat.motor.two.forward()
+explorerhat.motor.one.forward()
 
 while True:
     for step in step_sequence:
