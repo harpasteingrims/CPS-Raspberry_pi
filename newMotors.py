@@ -15,6 +15,8 @@ step_sequence = [
 [0,1,0,1]
 ]
 
+explorerhat.motor.two.forward()
+
 while True:
     for step in step_sequence:
         for pin in range(4):
