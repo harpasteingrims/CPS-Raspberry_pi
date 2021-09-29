@@ -29,7 +29,7 @@ while True:
         if sleep_time < 0.0004:
             explorerhat.motor.two.stop()
             explorerhat.motor.one.stop()
-            break;
+            break
 
 explorerhat.motor.two.stop()
 explorerhat.motor.one.stop()
