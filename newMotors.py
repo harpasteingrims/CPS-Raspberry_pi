@@ -26,7 +26,7 @@ while True:
         if sleep_time > min_sleep:
             sleep_time /= 1.1
         print(sleep_time)
-        if sleep_time < 0.0004:
+        if sleep_time < 0.005:
             explorerhat.motor.two.stop()
             explorerhat.motor.one.stop()
             break
