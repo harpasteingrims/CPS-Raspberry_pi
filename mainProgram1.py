@@ -25,6 +25,13 @@ step_sequence = [
 [0,1,0,1]
 ]
 
+ourColor = ""
+ourColor_rgb = ""
+color2Right = ""
+color2Right_rgb = ""
+color2Left = ""
+color2Left_rgb = ""
+
 
 # Main loop reading color and printing it every second.
 while True:
