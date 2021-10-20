@@ -103,7 +103,7 @@ while True:
         elif color == color2Left:
             print("Motor two stop")
             explorerhat.motor.two.stop()
-            explorerhat.motor.one.forward(10)
+            explorerhat.motor.one.forward(30)
 
         else: 
             explorerhat.motor.two.stop()
