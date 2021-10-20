@@ -40,17 +40,23 @@ while True:
     color_rgb = sensor.color_rgb_bytes
 
     if button1.is_pressed():
-        print("RGB color as 8 bits per channel int: #{0:02X} or as 3-tuple: {1}".format(
+        print("RGB color as 8 bits per channel int #1: #{0:02X} or as 3-tuple: {1}".format(
                 color, color_rgb
             ))
         ourColor = color
         ourColor_rgb = color_rgb
         
     elif button2.is_pressed():
+        print("RGB color as 8 bits per channel int #2: #{0:02X} or as 3-tuple: {1}".format(
+                color, color_rgb
+            ))
         color2Right = color
         color2Right_rgb = color_rgb
     
     elif button3.is_pressed():
+        print("RGB color as 8 bits per channel int #3: #{0:02X} or as 3-tuple: {1}".format(
+                color, color_rgb
+            ))
         color2Left = color
         color2Left_rgb = color_rgb
 
