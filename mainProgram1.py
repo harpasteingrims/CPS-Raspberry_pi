@@ -82,7 +82,9 @@ while True:
     #     drive(color)
 
     if color == ourColor:
-        print("ourColor" + str(ourColor))
+        print("OUR COLOR: #{0:02X} or as 3-tuple: {1}".format(
+                color, color_rgb
+            ))
         explorerhat.motor.two.forward(70)
         explorerhat.motor.one.backward(70)
     else: 
