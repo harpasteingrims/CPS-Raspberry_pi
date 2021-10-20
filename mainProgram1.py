@@ -33,12 +33,12 @@ color2Left = ""
 color2Left_rgb = ""
 
 def drive(color):
-    if (color == ourColor):
+    while color == ourColor:
         explorerhat.motor.two.forward(70)
         explorerhat.motor.one.backward(70)
-    else:
-        explorerhat.motor.two.stop()
-        explorerhat.motor.one.stop()
+
+    explorerhat.motor.two.stop()
+    explorerhat.motor.one.stop()
     
 
 
@@ -77,17 +77,19 @@ while True:
     lux = sensor.lux
     #print("Temperature: {0}K Lux: {1}\n".format(temp, lux))
     # Delay for a second and repeat.
+
+    # if (button1Pressed):
+    #     drive(color)
+
+    if color == ourColor:
+        print("ourColor" + ourColor)
+        explorerhat.motor.two.forward(70)
+        explorerhat.motor.one.backward(70)
+    else: 
+        explorerhat.motor.two.stop()
+        explorerhat.motor.one.stop()
+
     time.sleep(1.0)
-
-    if (button1Pressed):
-        drive(color)
-
-    # if color == ourColor:
-    #     explorerhat.motor.two.forward(70)
-    #     explorerhat.motor.one.backward(70)
-    # else: 
-    #     explorerhat.motor.two.stop()
-    #     explorerhat.motor.one.stop()
 
 
 
