@@ -40,16 +40,16 @@ def drive(color):
     explorerhat.motor.two.stop()
     explorerhat.motor.one.stop()
     
-
+red = False
+green = False
+blue = False
 
 # Main loop reading color and printing it every second.
 while True:
     
     color = sensor.color
     color_rgb = sensor.color_rgb_bytes
-    red = False
-    green = False
-    blue = False
+    
 
     if button1.is_pressed():
         print("RGB color as 8 bits per channel int #1: #{0:02X} or as 3-tuple: {1}".format(
