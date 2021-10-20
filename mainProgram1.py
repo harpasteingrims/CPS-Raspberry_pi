@@ -47,7 +47,9 @@ while True:
     
     color = sensor.color
     color_rgb = sensor.color_rgb_bytes
-    button1Pressed = False
+    red = False
+    green = False
+    blue = False
 
     if button1.is_pressed():
         print("RGB color as 8 bits per channel int #1: #{0:02X} or as 3-tuple: {1}".format(
@@ -55,8 +57,7 @@ while True:
             ))
         ourColor = color
         ourColor_rgb = color_rgb
-        button1Pressed = True
-        #drive(color)
+        red = True
         
     elif button2.is_pressed():
         print("RGB color as 8 bits per channel int #2: #{0:02X} or as 3-tuple: {1}".format(
@@ -64,6 +65,7 @@ while True:
             ))
         color2Right = color
         color2Right_rgb = color_rgb
+        green = True
     
     elif button3.is_pressed():
         print("RGB color as 8 bits per channel int #3: #{0:02X} or as 3-tuple: {1}".format(
@@ -71,6 +73,7 @@ while True:
             ))
         color2Left = color
         color2Left_rgb = color_rgb
+        blue = True
 
     # Read the color temperature and lux of the sensor too.
     temp = sensor.color_temperature
@@ -84,16 +87,27 @@ while True:
     print("SENSING COLOR: #{0:02X} or as 3-tuple: {1}".format(
                 color, color_rgb
             ))
+    if (red & green & blue):
+        if color == ourColor:
+            print("OUR COLOR: #{0:02X} or as 3-tuple: {1}".format(
+                    color, color_rgb
+                ))
+            explorerhat.motor.two.forward(50)
+            explorerhat.motor.one.backward(50)
+        
+        elif color == color2Right:
+            explorerhat.motor.two.forward(10)
+            explorerhat.motor.one.stop()
 
-    if color == ourColor:
-        print("OUR COLOR: #{0:02X} or as 3-tuple: {1}".format(
-                color, color_rgb
-            ))
-        explorerhat.motor.two.forward(70)
-        explorerhat.motor.one.backward(70)
-    else: 
-        explorerhat.motor.two.stop()
-        explorerhat.motor.one.stop()
+        elif color == color2Left:
+            explorerhat.motor.two.stop()
+            explorerhat.motor.one.forward(10)
+
+        else: 
+            explorerhat.motor.two.stop()
+            explorerhat.motor.one.stop()
+
+    
 
     time.sleep(1.0)
 
