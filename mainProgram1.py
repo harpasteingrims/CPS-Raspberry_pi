@@ -25,8 +25,6 @@ step_sequence = [
 [0,1,0,1]
 ]
 
-explorerhat.motor.two.forward()
-explorerhat.motor.one.backward()
 
 # Main loop reading color and printing it every second.
 while True:
