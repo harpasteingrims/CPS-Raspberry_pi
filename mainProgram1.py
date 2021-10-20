@@ -33,12 +33,12 @@ color2Left = ""
 color2Left_rgb = ""
 
 def drive(color):
-    if (color == ourColor):
+    while color == ourColor:
         explorerhat.motor.two.forward(70)
         explorerhat.motor.one.backward(70)
-    else:
-        explorerhat.motor.two.stop()
-        explorerhat.motor.one.stop()
+
+    explorerhat.motor.two.stop()
+    explorerhat.motor.one.stop()
     
 
 
