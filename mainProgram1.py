@@ -61,12 +61,12 @@ while True:
     # Delay for a second and repeat.
     time.sleep(1.0)
 
-    if color == ourColor:
-        explorerhat.motor.two.forward(70)
-        explorerhat.motor.one.backward(70)
-    else: 
-        explorerhat.motor.two.stop()
-        explorerhat.motor.one.stop()
+    # if color == ourColor:
+    #     explorerhat.motor.two.forward(70)
+    #     explorerhat.motor.one.backward(70)
+    # else: 
+    #     explorerhat.motor.two.stop()
+    #     explorerhat.motor.one.stop()
 
 
 while True:
