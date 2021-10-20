@@ -81,6 +81,10 @@ while True:
     # if (button1Pressed):
     #     drive(color)
 
+    print("SENSING COLOR: #{0:02X} or as 3-tuple: {1}".format(
+                color, color_rgb
+            ))
+
     if color == ourColor:
         print("OUR COLOR: #{0:02X} or as 3-tuple: {1}".format(
                 color, color_rgb
