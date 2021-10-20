@@ -32,6 +32,11 @@ color2Right_rgb = ""
 color2Left = ""
 color2Left_rgb = ""
 
+def drive(color):
+    if (color == ourColor):
+        explorerhat.motor.two.forward(70)
+        explorerhat.motor.one.backward(70)
+
 
 # Main loop reading color and printing it every second.
 while True:
@@ -45,6 +50,7 @@ while True:
             ))
         ourColor = color
         ourColor_rgb = color_rgb
+        drive(color)
         
     elif button2.is_pressed():
         print("RGB color as 8 bits per channel int #2: #{0:02X} or as 3-tuple: {1}".format(
@@ -73,6 +79,7 @@ while True:
     # else: 
     #     explorerhat.motor.two.stop()
     #     explorerhat.motor.one.stop()
+
 
 
 while True:
