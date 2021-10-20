@@ -36,6 +36,10 @@ def drive(color):
     if (color == ourColor):
         explorerhat.motor.two.forward(70)
         explorerhat.motor.one.backward(70)
+    else:
+        explorerhat.motor.two.stop()
+        explorerhat.motor.one.stop()
+    
 
 
 # Main loop reading color and printing it every second.
@@ -43,6 +47,7 @@ while True:
     
     color = sensor.color
     color_rgb = sensor.color_rgb_bytes
+    button1Pressed = False
 
     if button1.is_pressed():
         print("RGB color as 8 bits per channel int #1: #{0:02X} or as 3-tuple: {1}".format(
@@ -50,7 +55,8 @@ while True:
             ))
         ourColor = color
         ourColor_rgb = color_rgb
-        drive(color)
+        button1Pressed = True
+        #drive(color)
         
     elif button2.is_pressed():
         print("RGB color as 8 bits per channel int #2: #{0:02X} or as 3-tuple: {1}".format(
@@ -72,6 +78,9 @@ while True:
     #print("Temperature: {0}K Lux: {1}\n".format(temp, lux))
     # Delay for a second and repeat.
     time.sleep(1.0)
+
+    if (button1Pressed):
+        drive(color)
 
     # if color == ourColor:
     #     explorerhat.motor.two.forward(70)
