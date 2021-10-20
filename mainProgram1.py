@@ -82,7 +82,7 @@ while True:
     #     drive(color)
 
     if color == ourColor:
-        print("ourColor" + ourColor)
+        print("ourColor" + str(ourColor))
         explorerhat.motor.two.forward(70)
         explorerhat.motor.one.backward(70)
     else: 
