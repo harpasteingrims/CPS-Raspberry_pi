@@ -96,13 +96,11 @@ while True:
     
     elif color != ourColor:
         print("Motor two forward")
-        explorerhat.motor.two.forward(30)
-        explorerhat.motor.one.stop()
+        explorerhat.motor.two.forward(50)
 
     elif color != ourColor:
         print("Motor two stop")
-        explorerhat.motor.two.stop()
-        explorerhat.motor.one.forward(30)
+        explorerhat.motor.one.forward(50)
 
     else: 
         explorerhat.motor.two.stop()
