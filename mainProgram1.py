@@ -96,13 +96,13 @@ while True:
             explorerhat.motor.two.forward(50)
             explorerhat.motor.one.backward(50)
         
-        if color != ourColor:
+        elif color != ourColor:
             print("Motor two forward")
-            explorerhat.motor.two.forward(30)
+            explorerhat.motor.two.forward(40)
 
-        if color != ourColor:
+        elif color != ourColor:
             print("Motor two stop")
-            explorerhat.motor.one.backward(30)
+            explorerhat.motor.one.backward(40)
 
         else: 
             explorerhat.motor.two.stop()
