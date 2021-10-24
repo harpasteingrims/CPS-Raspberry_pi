@@ -87,27 +87,26 @@ while True:
     print("SENSING COLOR: #{0:02X} or as 3-tuple: {1}".format(
                 color, color_rgb
             ))
-    if (red & green & blue):
-        if color == ourColor:
-            print("OUR COLOR: #{0:02X} or as 3-tuple: {1}".format(
-                    color, color_rgb
-                ))
-            explorerhat.motor.two.forward(50)
-            explorerhat.motor.one.backward(50)
-        
-        elif color != ourColor:
-            print("Motor two forward")
-            explorerhat.motor.two.forward(30)
-            explorerhat.motor.one.stop()
+    if color == ourColor:
+        print("OUR COLOR: #{0:02X} or as 3-tuple: {1}".format(
+                color, color_rgb
+            ))
+        explorerhat.motor.two.forward(50)
+        explorerhat.motor.one.backward(50)
+    
+    elif color != ourColor:
+        print("Motor two forward")
+        explorerhat.motor.two.forward(30)
+        explorerhat.motor.one.stop()
 
-        elif color != ourColor:
-            print("Motor two stop")
-            explorerhat.motor.two.stop()
-            explorerhat.motor.one.forward(30)
+    elif color != ourColor:
+        print("Motor two stop")
+        explorerhat.motor.two.stop()
+        explorerhat.motor.one.forward(30)
 
-        else: 
-            explorerhat.motor.two.stop()
-            explorerhat.motor.one.stop()
+    else: 
+        explorerhat.motor.two.stop()
+        explorerhat.motor.one.stop()
 
     
 
