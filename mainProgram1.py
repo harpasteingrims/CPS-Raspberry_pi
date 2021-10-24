@@ -97,6 +97,7 @@ while True:
     elif color != ourColor:
         print("Motor two forward")
         explorerhat.motor.two.forward(50)
+        explorerhat.motor.one.backward(50)
 
     elif color != ourColor:
         print("Motor two stop")
