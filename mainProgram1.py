@@ -96,7 +96,7 @@ while True:
             explorerhat.motor.two.forward(50)
             explorerhat.motor.one.backward(50)
         
-        elif color_rgb == (0,255,0):
+        elif color_rgb == (255,0,0):
             print("Motor two forward, green")
             explorerhat.motor.one.forward(20)
             explorerhat.motor.two.stop()
