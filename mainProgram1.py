@@ -99,8 +99,8 @@ while True:
 
         elif (int(color_rgb[0]) > 0):
             print("Motor two forward, green")
-            explorerhat.motor.two.backward(40)
-            explorerhat.motor.one.stop()
+            explorerhat.motor.one.backward(40)
+            explorerhat.motor.two.stop()
 
         elif (int(color_rgb[2]) > 0):
             print("Motor two stop, blue")
