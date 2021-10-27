@@ -90,12 +90,11 @@ while True:
     if red == True:
 
         if color == ourColor:
+            explorerhat.motor.two.forward(60)
+            explorerhat.motor.one.backward(60)
             print("OUR COLOR: #{0:02X} or as 3-tuple: {1}".format(
                     color, color_rgb
                 ))
-            explorerhat.motor.two.forward(40)
-            explorerhat.motor.one.backward(40)
-
         
 
         elif (int(color_rgb[0]) > 0):
