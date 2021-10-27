@@ -98,13 +98,13 @@ while True:
         
         elif color_rgb == (0,255,0):
             print("Motor two forward, green")
-            explorerhat.motor.two.forward(30)
-            explorerhat.motor.one.stop()
+            explorerhat.motor.one.forward(20)
+            explorerhat.motor.two.stop()
 
         elif color_rgb == (0,0,255):
             print("Motor two stop, blue")
-            explorerhat.motor.one.backward(30)
-            explorerhat.motor.two.stop()
+            explorerhat.motor.two.backward(20)
+            explorerhat.motor.one.stop()
 
         else: 
             print("Go in else")
