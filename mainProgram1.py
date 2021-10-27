@@ -98,12 +98,12 @@ while True:
 
         
 
-        elif int(color_rgb[0]) < 256 & int(color_rgb[0]) > 0:
+        elif (int(color_rgb[0]) > 0):
             print("Motor two forward, green")
             explorerhat.motor.one.forward(20)
             explorerhat.motor.two.stop()
 
-        elif int(color_rgb[2]) < 256 & int(color_rgb[2]) > 0:
+        elif (int(color_rgb[2]) > 0):
             print("Motor two stop, blue")
             explorerhat.motor.two.backward(20)
             explorerhat.motor.one.stop()
