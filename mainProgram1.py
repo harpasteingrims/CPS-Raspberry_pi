@@ -108,8 +108,8 @@ while True:
 
         else: 
             print("Go in else")
-            # explorerhat.motor.two.stop()
-            # explorerhat.motor.one.stop()
+            explorerhat.motor.two.stop()
+            explorerhat.motor.one.stop()
 
     
 
