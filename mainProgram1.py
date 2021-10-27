@@ -93,9 +93,11 @@ while True:
             print("OUR COLOR: #{0:02X} or as 3-tuple: {1}".format(
                     color, color_rgb
                 ))
-            explorerhat.motor.two.forward(50)
-            explorerhat.motor.one.backward(50)
+            explorerhat.motor.two.forward(30)
+            explorerhat.motor.one.backward(30)
+
         
+
         elif int(color_rgb[0]) < 256 & int(color_rgb[0]) > 0:
             print("Motor two forward, green")
             explorerhat.motor.one.forward(20)
@@ -107,6 +109,8 @@ while True:
             explorerhat.motor.one.stop()
 
         else: 
+            print(color_rgb[0])
+            print(color_rgb[2])
             print("Go in else")
             explorerhat.motor.two.stop()
             explorerhat.motor.one.stop()
