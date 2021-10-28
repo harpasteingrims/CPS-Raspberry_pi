@@ -108,13 +108,13 @@ while True:
         elif (color_rgb == (16,16,0) or color_rgb == (45,45,0) or color_rgb == (8, 8, 8) or color_rgb == (16,16,16)):
             print("Motor two forward, red")
             print("Motor two forward, gulur")
-            explorerhat.motor.one.backward(40)
+            explorerhat.motor.one.backward(30)
             explorerhat.motor.two.stop()
 
         elif (color_rgb == (0,0,0)):
             print("Motor two stop, blue")
             print("Motor two stop, svartur")
-            explorerhat.motor.two.forward(40)
+            explorerhat.motor.two.forward(30)
             explorerhat.motor.one.stop()
 
         else: 
