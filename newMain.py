@@ -25,6 +25,9 @@ last_valid_score = None # placeholder for the most recent time an actual color w
 def normalize(rgb):
 
     r, g, b = rgb[0], rgb[1], rgb[2]
+    print(r)
+    print(g)
+    print(b)
 
     magnitude = (r ** 2 + g ** 2 + b ** 2) ** 0.5
     print("magnitude: " +  str(magnitude))
