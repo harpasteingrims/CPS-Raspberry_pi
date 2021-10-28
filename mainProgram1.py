@@ -109,13 +109,13 @@ while True:
             print("Motor two forward, red")
             print("Motor two forward, gulur")
             explorerhat.motor.one.backward(50)
-            explorerhat.motor.two.stop()
+            explorerhat.motor.two.forward(30)
 
         elif (color_rgb == (0,0,0)):
             print("Motor two stop, blue")
             print("Motor two stop, svartur")
             explorerhat.motor.two.forward(50)
-            explorerhat.motor.one.stop()
+            explorerhat.motor.one.backward(30)
 
         else: 
             print(color_rgb[0])
