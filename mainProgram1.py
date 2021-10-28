@@ -48,7 +48,13 @@ blue = False
 while True:
 
     # explorerhat.motor.two.forward(60)  --> Hægra hjólið fram
+    # explorerhat.motor.one.backward(60) --> Vinstra hjólið fram
+    # Til hægri er blár
+    # Til vinstri rauð
+    # Miðja er græn
+    explorerhat.motor.two.forward(60)
     explorerhat.motor.one.backward(60)
+
     color = sensor.color
     color_rgb = sensor.color_rgb_bytes
     
@@ -100,7 +106,7 @@ while True:
         
 
         elif (int(color_rgb[0]) > 0):
-            print("Motor two forward, green")
+            print("Motor two forward, red")
             explorerhat.motor.one.backward(40)
             explorerhat.motor.two.stop()
 
