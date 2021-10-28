@@ -47,6 +47,7 @@ blue = False
 # Main loop reading color and printing it every second.
 while True:
     
+    explorerhat.motor.two.forward(60)
     color = sensor.color
     color_rgb = sensor.color_rgb_bytes
     
