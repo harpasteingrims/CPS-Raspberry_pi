@@ -106,7 +106,13 @@ while True:
         elif color != ourColor:
             explorerhat.motor.two.stop()
             explorerhat.motor.one.stop()
-            if (color_rgb == (16,16,0) or color_rgb == (45,45,0) or color_rgb == (8, 8, 8) or color_rgb == (16,16,16)):
+            if color == ourColor:
+                explorerhat.motor.two.forward(60)
+                explorerhat.motor.one.backward(60)
+                print("OUR COLOR: #{0:02X} or as 3-tuple: {1}".format(
+                        color, color_rgb))
+                        
+            elif (color_rgb == (16,16,0) or color_rgb == (45,45,0) or color_rgb == (8, 8, 8) or color_rgb == (16,16,16)):
                 print("Motor two forward, red")
                 print("Motor two forward, gulur")
                 explorerhat.motor.one.backward(50)
