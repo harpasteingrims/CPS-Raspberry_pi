@@ -111,7 +111,7 @@ while True:
                 explorerhat.motor.one.backward(60)
                 print("OUR COLOR: #{0:02X} or as 3-tuple: {1}".format(
                         color, color_rgb))
-                        
+
             elif (color_rgb == (16,16,0) or color_rgb == (45,45,0) or color_rgb == (8, 8, 8) or color_rgb == (16,16,16)):
                 print("Motor two forward, red")
                 print("Motor two forward, gulur")
@@ -133,7 +133,7 @@ while True:
 
     
 
-    time.sleep(0.0001)
+    time.sleep(0.01)
 
 
 
