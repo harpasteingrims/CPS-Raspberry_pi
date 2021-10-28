@@ -27,6 +27,7 @@ def normalize(rgb):
     r, g, b = rgb[0], rgb[1], rgb[2]
 
     magnitude = (r ** 2 + g ** 2 + b ** 2) ** 0.5
+    print("magnitude: " + magnitude)
 
     r /= magnitude
     g /= magnitude
