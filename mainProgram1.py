@@ -105,7 +105,7 @@ while True:
                 ))
         
 
-        elif (color_rgb == (16,16,16) | color_rgb == (8,8,8)):
+        elif (color_rgb == (16,16,16)):
             print("Motor two forward, red")
             print("Motor two forward, gulur")
             explorerhat.motor.one.backward(40)
