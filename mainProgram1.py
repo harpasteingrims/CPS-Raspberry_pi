@@ -52,8 +52,8 @@ while True:
     # Til hægri er blár
     # Til vinstri rauð
     # Miðja er græn
-    explorerhat.motor.two.forward(60)
-    explorerhat.motor.one.backward(60)
+    # explorerhat.motor.two.forward(60)
+    # explorerhat.motor.one.backward(60)
 
     color = sensor.color
     color_rgb = sensor.color_rgb_bytes
