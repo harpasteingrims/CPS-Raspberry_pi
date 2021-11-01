@@ -7,6 +7,7 @@ import time
 i2c = board.I2C()  # uses board.SCL and board.SDA
 i2c.gain = 60
 sensor = adafruit_tcs34725.TCS34725(i2c)
+sensor.gain = 60
 
 button1 = explorerhat.touch.one
 button2 = explorerhat.touch.two
