@@ -15,6 +15,7 @@ import numpy
 
 #initializeColorSensor
 i2c = busio.I2C(board.SCL, board.SDA)
+i2c.gain = 60
 
 # score is the input to the pid controller
 score = 0
